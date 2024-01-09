@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <button class="open-modal">
+        <i class="fa-solid fa-info" aria-hidden="true">
+        <span class="sr-only">Help/info</span>
+        </i>
+      </button>
+      <div class="modal" data-animation="zoomInOut">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                Help/Info <button class="modal-close" aria-label="modal-close" data-close>&times;</button>
+            </header>
+
+            <section class="modal-content">
+                <p><strong>Press &times;, Esc, or click outside of the modal to close it</strong></p>
+
+                <p>This app is to help or bring to your notice about the amount owed. You borrowed this amount &#8358<span class="borrowed"></span> on this date - <span class="date-borrowed"></span>. Accordint to Kuda, the interest rate is 0.3%
+                </p>
+            </section>
+
+            <footer>It is still undergoing styles. Also, there are also features I want to include e.g. aside the default interest calculation, it can help keep track of other interest with different rate and amount</footer>
+        </div>
+    </div>
+      <h1>Interest App</h1>
+      <p>You Owe: <span id="output"></span></p>
+      <label for="selectRange">Day: </label>
+      <select id="selectRange"></select>
+      <div class="table-container">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>day</th>
+              <th>Date</th>
+              <th>Amount(₦)</th>
+              <th>DailyInterest(₦)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table content will be generated dynamically -->
+          </tbody>
+        </table>
+      </div>
+      <!-- <button>View all</button> -->
+    </main>
+  </body>
+</html>
